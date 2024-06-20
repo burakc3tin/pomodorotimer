@@ -1,0 +1,47 @@
+{
+  "name": "burak-pomodoro-timer",
+  "displayName": "Burak Pomodoro Timer",
+  "description": "A Pomodoro timer extension for VSCode",
+  "version": "0.1.0",
+  "publisher": "BurakCetin",
+  "engines": {
+    "vscode": "^1.58.0"
+  },
+  "activationEvents": [
+    "onCommand:startPomodoroTimer",
+    "onCommand:stopPomodoroTimer",
+    "onCommand:resetPomodoroTimer"
+  ],
+  "main": "./out/extension.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/your-repository"
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "extension.startPomodoroTimer",
+        "title": "Start Pomodoro Timer"
+      },
+      {
+        "command": "extension.stopPomodoroTimer",
+        "title": "Stop Pomodoro Timer"
+      },
+      {
+        "command": "extension.resetPomodoroTimer",
+        "title": "Reset Pomodoro Timer"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "@types/node": "^14.14.31",
+    "typescript": "^4.2.3",
+    "vscode": "^1.1.37"
+  }
+}
